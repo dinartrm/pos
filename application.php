@@ -43,10 +43,6 @@
         {
             mysqli_query($this->koneksi,"UPDATE `pegawai` SET `id_pegawai`='$id_peg',`nm_pegawai`='$nm_pegawai',`email`='$email',`alamat`='$alamat',`no_telp`='$no_telp',`jsn_kelamin`='$jns_kelamin',`tgl_lahir`='$tgl_lahir',`tmp_lahir`='$tmp_lahir' WHERE id_pegawai='$id'");
         }
-        public function DeleteaddPegawai($query)
-        {
-         mysqli_query($this->koneksi,$query);
-        }
         //add akun
         public function addAkun($id_peg,$username,$password)
         {
@@ -70,9 +66,9 @@
         {
             mysqli_query($this->koneksi,"INSERT INTO kat_produk(nm_kategori, keterangan) VALUES ('$nm_kat','$ketrangan')");
         }
-        public function updateKatProduk($id_kategori,$nm_kat,$ketrangan,$id)
+        public function updateKatProduk($nm_kat,$ketrangan,$id)
         {
-            mysqli_query($this->koneksi,"UPDATE `kat_produk` SET `id_kategori`='$id_kategori',`nm_kategori`='$nm_kat',`keterangan`='$ketrangan' WHERE id_kategori='$id'");
+            mysqli_query($this->koneksi,"UPDATE `kat_produk` SET `nm_kategori`='$nm_kat',`keterangan`='$ketrangan' WHERE id_kategori='$id'");
         }
         public function DeleteKatProduk($query)
         {
@@ -83,9 +79,9 @@
         {
             mysqli_query($this->koneksi,"INSERT INTO satuan(nm_satuan, keterangan) VALUES ('$nm_sat','$ketrangan')");
         }
-        public function updateSatuan($id_satuan,$nm_sat,$ketrangan,$id)
+        public function updateSatuan($nm_sat,$ketrangan,$id)
         {
-            mysqli_query($this->koneksi,"UPDATE `satuan` SET `id_satuan`='$id_satuan', `nm_satuan`='$nm_sat', `keterangan`='$ketrangan' WHERE id_satuan='$id'");
+            mysqli_query($this->koneksi,"UPDATE `satuan` SET `nm_satuan`='$nm_sat', `keterangan`='$ketrangan' WHERE id_satuan='$id'");
         }
         public function DeleteSatuan($query)
         {

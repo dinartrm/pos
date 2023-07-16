@@ -35,7 +35,7 @@ $queryById = "SELECT * FROM satuan WHERE id_satuan='$id'";
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Keterangan</label>
-                <input type="date" name="keterangan" class="form-control" id="exampleInputEmail1" value="<?php echo $item['keterangan']?>">
+                <input type="tezx" name="keterangan" class="form-control" id="exampleInputEmail1" value="<?php echo $item['keterangan']?>">
             </div>  
           
             
@@ -59,14 +59,14 @@ $queryById = "SELECT * FROM satuan WHERE id_satuan='$id'";
 <?php 
     if (isset($_POST['submit'])) {
         // untuk menerima post dari textfield
-        $namaSatuan = $_POST['nm_satuan'];//ubah
+        $namaSatuan = $_POST['namaSatuan'];//ubah
         $keterangan = $_POST['keterangan'];
        //ubah
 
         //jalankan method addPegawai  
-        $app->updateSupplier($namaSatuan,$keterangan); //ubah
+        $app->updateSatuan($namaSatuan,$keterangan,$id); //ubah
         // ridirect link
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=dasboard.php?page=app/view_produk">';
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=dasboard.php?page=app/view_satuan">';
     }
 
 ?>

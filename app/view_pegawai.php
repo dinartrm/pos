@@ -40,7 +40,6 @@
           <td><?php echo $row['no_telp'];?></td>          
           <td><?php echo $row['alamat'];?></td>
           <td><a href="dasboard.php?page=app/edit_pegawai&idpegawai=<?php echo $row['id_pegawai'];?>" class="btn btn-primary">Edit</a>
-            <a href="dasboard.php?page=app/delete_pegawai&idpegawai=<?php echo $row['id_pegawai'];?>" class="btn btn-danger">Delete</a></td>
         </tr>
       </tbody>
       <?php $no++; } ?>

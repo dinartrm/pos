@@ -74,9 +74,9 @@ $queryById = "SELECT * FROM supplier WHERE id_supplier='$id'";
         //ubah
 
         //jalankan method addPegawai  
-        $app->updateSupplier($nm_supplier,$no_telp,$email,$alamat); //ubah
+        $app->updateSupplier($id,$nm_supplier,$no_telp,$email,$alamat); //ubah
         // ridirect link
-        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=dasboard.php?page=app/view_produk">';
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=dasboard.php?page=app/view_supplier">';
     }
 
 ?>
